@@ -914,7 +914,7 @@ BEGIN
     HTP.p('<div class="formRight">');  --2
   
    if  to_date(rec.t_start, 'hh24:mi:ss') <=  to_date(endest, 'hh24:mi:ss') then 
-   HTP.p('          <div style="float:left; margin-right: 10px; margin-top: 3px;"> <span>С</span>  </div>');
+   HTP.p('          <div style="float:left; margin-right: 10px; margin-top: 3px;"> <span>пїЅ</span>  </div>');
     HTP.p('                  <div style="float:left">');   --3
      qba_utils.htp_form_select_option (
       cname_ => 'u_subscriber_left'
@@ -929,7 +929,7 @@ BEGIN
    end if;
  
   if  to_date(rec.t_start, 'hh24:mi:ss') >  to_date(endest, 'hh24:mi:ss') then 
-  /* HTP.p('          <div style="float:left; margin-right: 10px; margin-top: 3px;"> <span>С</span>  </div>');
+  /* HTP.p('          <div style="float:left; margin-right: 10px; margin-top: 3px;"> <span>пїЅ</span>  </div>');
     HTP.p('                  <div style="float:left">');   --3
      qba_utils.htp_form_select_option (
       cname_ => 'u_subscriber_left'
@@ -943,7 +943,7 @@ BEGIN
    HTP.p('</div>'); --3 */
    
    
-   HTP.p('          <div style="float:left; margin-right: 10px; margin-top: 3px;"> <span>С</span>  </div>');
+   HTP.p('          <div style="float:left; margin-right: 10px; margin-top: 3px;"> <span>пїЅ</span>  </div>');
     HTP.p('                  <div style="float:left">');   --3
      qba_utils.htp_form_select_option (
       cname_ => 'u_subscriber_left'
@@ -1087,7 +1087,7 @@ BEGIN
    end loop; 
     
     
---   HTP.p('<div class="rowElem noborder "  style="margin-top: 12px" id = "pusher"><a href="'||tm_common_v2.c#base_path|| c#package||'.html"  title=""><input type="button" value="Ок" class="redBtn" ></a></div>');  
+--   HTP.p('<div class="rowElem noborder "  style="margin-top: 12px" id = "pusher"><a href="'||tm_common_v2.c#base_path|| c#package||'.html"  title=""><input type="button" value="пїЅпїЅ" class="redBtn" ></a></div>');  
    
    HTP.p ('<div class="rowElem noborder "  style="margin-top: 12px"><a href="'|| tm_common_v2.c#base_path|| c#package|| '.html" title=""><input type="button" id="pushDEL"  value="'|| qba_lang.MESSAGE (p_name => 'SYS.REJECT')|| '" class="redBtn" /></a>');
    
@@ -1395,7 +1395,7 @@ BEGIN
     HTP.p('    <label>'||qba_lang.MESSAGE (p_name => 'SYS.SELECTED_TIME')||'</label>');
     HTP.p('<div class="formRight">');  --2
   
-   HTP.p('          <div style="float:left; margin-right: 10px; margin-top: 3px;"> <span>С</span>  </div>');
+   HTP.p('          <div style="float:left; margin-right: 10px; margin-top: 3px;"> <span>пїЅ</span>  </div>');
     HTP.p('                  <div style="float:left">');   --3
      qba_utils.htp_form_select_option (
       cname_ => 'u_subscriber_left'
@@ -1410,7 +1410,7 @@ BEGIN
     
     IF tm_common_v2.c#user_profile.role_id in (1,2,3,4,5) THEN
     
-    HTP.p('<div style="float:left;  margin-right: 10px; margin-top: 3px;"> <span style="margin-left:10px"> По </span></div>');
+    HTP.p('<div style="float:left;  margin-right: 10px; margin-top: 3px;"> <span style="margin-left:10px"> пїЅпїЅ </span></div>');
     HTP.p('<div style="float:left">');     --4
     qba_utils.htp_form_select_option (
       cname_ => 'u_subscriber_right'
@@ -2565,7 +2565,7 @@ end deleteOldEvents;
     
     for rec in (select t.id identificator, t.vc_theme,TO_CHAR(t.vc_date_from,'DD:MM') tt,TO_CHAR(t.vc_date_from,'HH:MM:SS') vv, vc_status,vc_initiator vc, us.user_id usid, ui.last_name lastn 
                 from tm_videoconferences t, QBA_USERS us, tm_in_conference tic, QBA_USERS ui
-                where t.vc_status <> 'архив' and TIC.IN_VIDEOCONF = T.ID and  US.USER_ID = TM_COMMON_V2.C#USER_PROFILE.USER_ID and us.user_id = TIC.IN_USER and UI.USER_ID = T.VC_INITIATOR
+                where t.vc_status <> 'пїЅпїЅпїЅпїЅпїЅ' and TIC.IN_VIDEOCONF = T.ID and  US.USER_ID = TM_COMMON_V2.C#USER_PROFILE.USER_ID and us.user_id = TIC.IN_USER and UI.USER_ID = T.VC_INITIATOR
                 order by t.vc_date_from) loop
     
      HTP.p ('                <tr>');
@@ -2615,7 +2615,7 @@ BEGIN
     
     for rec in (select t.id identificator, t.vc_theme,TO_CHAR(t.vc_date_from,'DD:MM') tt,TO_CHAR(t.vc_date_from,'HH:MM:SS') vv, vc_status,vc_initiator vc, us.user_id usid, ui.last_name lastn 
                 from tm_videoconferences t, QBA_USERS us, tm_in_conference tic, QBA_USERS ui
-                where t.vc_status = 'архив' and TIC.IN_VIDEOCONF = T.ID and  US.USER_ID = TM_COMMON_V2.C#USER_PROFILE.USER_ID and us.user_id = TIC.IN_USER and UI.USER_ID = T.VC_INITIATOR
+                where t.vc_status = 'пїЅпїЅпїЅпїЅпїЅ' and TIC.IN_VIDEOCONF = T.ID and  US.USER_ID = TM_COMMON_V2.C#USER_PROFILE.USER_ID and us.user_id = TIC.IN_USER and UI.USER_ID = T.VC_INITIATOR
                 order by t.vc_date_from) LOOP
                 
      rn := rn + 1;           
@@ -2826,7 +2826,7 @@ BEGIN
      HTP.p('</div>');
      HTP.p('</div>');
      HTP.p('<div class="widget" style="width: 680px; margin-left: 8px;">'); 
-     HTP.p('                           <div class="head"><h5 class="iPencil">Запись видеоконференции</h5></div>');
+     HTP.p('                           <div class="head"><h5 class="iPencil">пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</h5></div>');
      HTP.p('                           <iframe width="680" height="328" src="http://www.youtube.com/embed/IrkxYEdsvSw" frameborder="0" allowfullscreen=""></iframe>');
      HTP.p('                          </div>');
                                 
@@ -2835,7 +2835,7 @@ BEGIN
      
      HTP.p('<div class="rowElem noborder">');    
      HTP.p ('      <div class="rightbut">');
-     HTP.p('         <a href="' || TM_COMMON_V2.C#VIDEO_CONF_HREF || '" title=""><input type="button" value="Отмена" class="redBtn"/></a>');
+     HTP.p('         <a href="' || TM_COMMON_V2.C#VIDEO_CONF_HREF || '" title=""><input type="button" value="пїЅпїЅпїЅпїЅпїЅпїЅ" class="redBtn"/></a>');
      HTP.p('   </div>');
      HTP.p ('    </div>');
      HTP.p ( '                      </div>');                           
@@ -3043,7 +3043,7 @@ BEGIN
      HTP.p('</div>');
      HTP.p('<div class="rowElem noborder">');    
      HTP.p ('      <div class="rightbut">');
-     HTP.p('         <a href="' || TM_COMMON_V2.C#VIDEO_CONF_HREF || '" title=""><input type="button" value="Отмена" class="redBtn"/></a>');
+     HTP.p('         <a href="' || TM_COMMON_V2.C#VIDEO_CONF_HREF || '" title=""><input type="button" value="пїЅпїЅпїЅпїЅпїЅпїЅ" class="redBtn"/></a>');
      HTP.p('   </div>');
      HTP.p ('    </div>');
      HTP.p ( '                      </div>');                           
